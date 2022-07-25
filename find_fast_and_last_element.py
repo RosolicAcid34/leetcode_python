@@ -4,6 +4,7 @@ class Solution:
         N = len(nums)
         start, end = -1, -1
         left, right = 0, N
+        # binary search for left side
         while left < right:
             mid = (left + right) // 2
             if nums[mid] >= target:
@@ -11,6 +12,8 @@ class Solution:
             else:
                 left = mid + 1
         if left < N and nums[left] == target: start = left
+        # binary search for the right side
+
         left, right = 0, N
         while left < right:
             mid = (left + right) // 2
@@ -28,7 +31,5 @@ class Solution:
 so, we approach with binary search. First we spilt the array in two parts and operate with binary search algorithm.
 """
 
-
-#binary search for the right side
 
 
